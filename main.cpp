@@ -18,6 +18,10 @@ struct Comics {
     int published_pages;
 };
 
+int getPublishedPages(std::string comics_name) {
+    return 0;
+}
+
 int main() {
     using namespace std;
     vector<Comics> comics;
@@ -34,6 +38,7 @@ int main() {
             cout << endl;
         }
         for (int i = 0; i < comics.size(); ++i) {
+            comics[i].published_pages = getPublishedPages(comics[i].name);
             cout.width(20);
             cout << comics[i].name << ": ";
             cout.width(4);
