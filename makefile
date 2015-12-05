@@ -4,7 +4,8 @@ main.o: main.cpp
 	clang++ -c main.cpp -std=c++11 \
 	-Icasablanca/Release/include/cpprest \
 	-Icasablanca/Release/include \
-	-I/usr/local/include/
+	-I/usr/local/include/ \
+	-I/usr/local/opt/openssl/include
 
 follow-acomics: main.o
 	clang++  -o follow-acomics main.o -lcrypto -lssl \
